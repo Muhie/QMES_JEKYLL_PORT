@@ -1,0 +1,56 @@
+# Jekyll Configuration for QMES Website
+title: Queen Mary Electronics Society
+description: QMES - Electronics, Programming, and Robotics Society at Queen Mary University of London
+url: "https://qmes.github.io" # Change this to your actual URL
+baseurl: "" # Change this if using a project page
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "QMES Team"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - .github
+  - app/
+  - static_site_generator.py
+  - generate_pages.py
+  - build_static_site.py
+  - extract_blog_data.py
+  - static_requirements.txt
+  - STATIC_SITE_README.md
+  - DEPLOYMENT_GUIDE.md
+  - QUICK_START.md
+  - _jekyll_site_generator.py
+  - jekyll_requirements.txt
+  - Jekyll_README.md
+  - Jekyll_DEPLOYMENT_GUIDE.md

@@ -1,0 +1,24 @@
+---
+layout: page
+title: Our Progress
+permalink: /our-progress/
+---
+
+<div>
+    <h1 class="heading-subtitle"><strong>Our Progress - Where are we now?</strong></h1>
+</div>
+
+<div class="row" style="margin: 15px;">
+    <h2 class="line" style="margin: 15px;">Latest Posts From The QMES Team</h2>
+    <div class="col-md-6 col-sm-12">
+        {% for post in site.posts %}
+        <div class="post-preview" style="margin: 15px;">
+            <a href="{{ post.url | relative_url }}">
+                <h2 class="post-title">{{ post.title }}</h2>
+            </a>
+            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+            <p class="post-meta">Posted by {{ post.author }} on {{ post.date | date: "%B %d, %Y" }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>

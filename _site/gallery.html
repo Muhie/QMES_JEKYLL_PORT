@@ -1,0 +1,22 @@
+---
+layout: page
+title: Gallery
+permalink: /gallery/
+---
+
+<div>
+    <h1 class="heading-subtitle"><strong>QMES Gallery</strong></h1>
+</div>
+
+<div class="container-fluid" style="margin: 15px;">
+    <div class="row">
+        {% assign gallery_images = "gallery-image-1.jpg,gallery-image-2.jpg,gallery-image-3.jpg,gallery-image-4.jpg,gallery-image-5.jpg,robot.jpg,robot.png,pcb.png" | split: "," %}
+        {% for image in gallery_images %}
+        <div class="col-md-4 col-sm-6 col-12" style="margin-bottom: 20px;">
+            <div class="gallery-item">
+                <img src="{{ '/images/' | append: image | relative_url }}" alt="Gallery Image" class="img-fluid gallery-image" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
