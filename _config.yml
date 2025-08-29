@@ -1,8 +1,8 @@
 # Jekyll Configuration for QMES Website
 title: Queen Mary Electronics Society
 description: QMES - Electronics, Programming, and Robotics Society at Queen Mary University of London
-url: "https://qmes.github.io" # Change this to your actual URL
-baseurl: "" # Change this if using a project page
+url: "https://muhie.github.io"
+baseurl: "/QMES_JEKYLL_PORT"
 
 # Build settings
 markdown: kramdown
