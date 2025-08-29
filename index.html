@@ -1,0 +1,44 @@
+---
+layout: default
+title: Home
+---
+
+<div class="justify-content-center donate-container">
+    <div class="image-container">
+        <img src="{{ '/images/pcb.png' | relative_url }}" class="image-fitter donate-image">
+    </div>
+</div>
+
+<div>
+    <h1 class="heading-title"><strong>Welcome to Queen Mary Electronics Society!</strong></h1>
+    <br><br>
+</div>
+
+<div class="container-fluid" style="margin-bottom: 10px;">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h2 class="line">Our Bio</h2>
+            <p class="body-content">QMES was founded by a group of passionate engineers from Queen Mary, with a common interest and motivation in electronics, programming and robotics. Our society has 3 key goals:<br> 1. To host weekly electronics related activities for other STEM students, or anyone with a fascination with electronics. <br> 2. Participate in at-least 3 electronics related competitions per year. <br> 3. Provide electronics outreach and education.</p>
+        </div>
+        <div class="col-md-6 col-sm-12" style="margin-bottom: 15px;">
+            <h2 class="line">Your QMES key members.</h2>
+            <h3>President: Muhie Al Haimus<div class="row no-gutters gallery-spacing"><img class="gallery-photo" src="{{ '/images/Muhie.jpeg' | relative_url }}"></div><br>VP and Welfare Manager: Bohdan Skulimovsky<div class="row no-gutters gallery-spacing"><img class="gallery-photo" src="{{ '/images/Bohdan.jpg' | relative_url }}"></div><br>Treasurer: Rachin Dalal<div class="row no-gutters gallery-spacing"><img class="gallery-photo" src="{{ '/images/Rachin.jpeg' | relative_url }}"></div></h3>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h2 class="line">Our Sponsors</h2>
+            <img src="{{ '/images/sponsor-board.png' | relative_url }}" alt="sponsors" class="image-fitter">
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h2 class="line" style="margin: 10px;">Latest Posts From QMES.</h2>
+            {% for post in site.posts limit:3 %}
+            <div class="post-preview" style="margin: 10px;">
+              <a href="{{ post.url | relative_url }}">
+                <h2 class="post-title">{{ post.title }}</h2>
+              </a>
+              <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+              <p class="post-meta">Posted by {{ post.author }} on {{ post.date | date: "%B %d, %Y" }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
